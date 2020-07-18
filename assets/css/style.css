@@ -1,0 +1,35 @@
+#todo-error{
+  color: red;
+  font-size: 2em;
+}
+
+.shadow-lg {
+    box-shadow: 0 0rem 1rem rgba(124, 124, 124, 0.747)!important;
+}
+
+.bg-light {
+    background-color: #f8f9fad3!important;
+}
+
+.text-shadow{
+  text-shadow:  0 0px 3px #ffffff;
+}
+
+.bg-secondary {
+    background-color: #6c757dda!important;
+    
+}
+
+.strikethrough:checked{
+  text-decoration: line-through;
+}
+
+.custom{
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
