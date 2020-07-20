@@ -16,8 +16,9 @@ export default class Todo {
                         <div class="row p-2">
                         <button type="button" class="btn btn-outline-danger px-1 mb-2 py-0"
                         onclick="app.todoController.removeTodo('${this.id}')"><i class="fa fa-trash"></i></button>
-                        <input id="checked" type="checkbox" class="mb-2 mx-1 custom" onclick="app.todoController.toggleTodoStatus('${this.id}')">
-	
+                        
+	<button type="button" class="btn btn-outline-success px-1 mx-1 mb-2 py-0"
+                        onclick="app.todoController.toggleTodoStatus('${this.id}')"><i class="fa fa-check"></i></button>
                                             <h4 class="${this.completed == true ? 'strikethrough' : ''}">${this.description}</h4>
                                             
 	
