@@ -20,8 +20,9 @@
     
 }
 
-.strikethrough:checked{
+.strikethrough{
   text-decoration: line-through;
+  color: green;
 }
 
 .custom{

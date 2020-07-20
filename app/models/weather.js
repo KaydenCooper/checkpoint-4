@@ -13,11 +13,11 @@ export default class Weather {
   get Template() {
     return /*html*/`
     <div class="row px-4">
-			<div class="card shadow-lg bg-secondary text-center text-light col-2 m-3 pt-2 px-1">
-          <h4><u>${this.city}</u></h4>
-            <p><b>Temp:</b> ${this.kelvin}K</p>
-            <p><b>Humidity:</b> ${this.humidity}%</p>
-            <p><b>Wind:</b> ${this.wind}</p>
+			<div class="card shadow-lg bg-secondary text-light col-2 m-3 pt-2 px-1">
+          <h4 class ="text-center"><u>${this.city}</u></h4>
+            <p class="mb-1"><b>Temp:</b> ${this.kelvin}K</p>
+            <p class="mb-1"><b>Humidity:</b> ${this.humidity}%</p>
+            <p class="mb-1"><b>Wind:</b> ${this.wind}</p>
 			</div>
 		</div>
    

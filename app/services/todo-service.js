@@ -1,5 +1,6 @@
 import store from "../store.js";
 import Todo from "../models/todo.js";
+import TodoController from "../controllers/todo-controller.js";
 
 // @ts-ignore
 const todoApi = axios.create({
@@ -25,14 +26,22 @@ class TodoService {
   }
 
   toggleTodoStatusAsync(todoId) {
-    let todo = store.State.todos.find(todo => todo._id == todoId);
 
-    //TODO Make sure that you found a todo,
-    //		and if you did find one
-    //		change its completed status to whatever it is not (ex: false => true or true => false)
+    let todo = store.State.todos.find(todo => todo.id == todoId);
+    if (todo.completed == true) {
+      todo.completed = false
 
-    todoApi.put(todoId, todo);
-    //TODO do you care about this data? or should you go get something else?
+    } else {
+      todo.completed = true
+    }
+
+
+    todoApi.put("todos/" + todoId, todo).then(res => {
+      this.getTodos()
+    }).catch(err => console.error(err))
+
+
+
   }
 
   removeTodoAsync(todoId) {
